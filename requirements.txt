@@ -1,0 +1,12 @@
+pandas
+numpy
+scikit-learn
+statsmodels
+matplotlib
+seaborn
+plotly
+folium
+streamlit
+joblib
+pyarrow
+pytest
