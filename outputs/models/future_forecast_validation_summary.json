@@ -1,0 +1,8 @@
+{
+  "locations_validated": 43,
+  "mean_rmse": 12.291828403896904,
+  "mean_mae": 10.072572195296324,
+  "mean_mape": 16.644700643313104,
+  "max_rows_used_for_training": 96,
+  "total_synthetic_rows_added": 1039
+}

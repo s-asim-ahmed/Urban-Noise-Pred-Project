@@ -1,0 +1,21 @@
+{
+  "selected_model": "Hourly Seasonal Profile",
+  "aic": NaN,
+  "training_rows": 8488,
+  "observed_coverage_ratio": 0.005537229029217719,
+  "recent_level_adjustment": 0.09294495307288742,
+  "damped_trend_slope": 0.0,
+  "synthetic_rows_added": 0,
+  "mean_difference_pct": 0.002415223005376618,
+  "std_difference_pct": 0.0691820483990983,
+  "hourly_profile_correlation": 0.5906044152350997,
+  "passes_alignment_check": false,
+  "final_rows": 47,
+  "real_rows_used": 47,
+  "max_total_rows": 1000,
+  "synthetic_fallback_applied": true,
+  "forecast_rows": 48,
+  "forecast_start": "2024-01-01 00:00:00",
+  "forecast_end": "2024-01-02 23:00:00",
+  "last_observed_timestamp": "2023-12-31 10:00:00"
+}

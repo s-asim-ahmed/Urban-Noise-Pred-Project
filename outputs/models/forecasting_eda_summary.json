@@ -1,0 +1,16 @@
+{
+  "row_count": 1994,
+  "location_count": 50,
+  "time_start": "2023-01-01 03:00:00",
+  "time_end": "2023-12-31 20:00:00",
+  "peak_hour": 15,
+  "quiet_hour": 4,
+  "peak_day_of_week": 2,
+  "weekday_weekend_gap_db": 0.8283190367160245,
+  "mean_daily_seasonality_autocorr_lag24": 0.009128110001311173,
+  "noise_traffic_correlation": 0.006483885419009845,
+  "noise_temperature_correlation": 0.02952790764418707,
+  "noise_wind_correlation": 0.030606206254731518,
+  "linear_trend_slope_per_step": -0.0007865009919967345,
+  "recommended_forecast_model": "Seasonal SARIMA with 24-hour seasonality"
+}

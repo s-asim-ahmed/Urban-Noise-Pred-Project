@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8000a73b9d8bedcb3faadc23818f5aa9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_8000a73b9d8bedcb3faadc23818f5aa9" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8000a73b9d8bedcb3faadc23818f5aa9 = L.map(
+                "map_8000a73b9d8bedcb3faadc23818f5aa9",
+                {
+                    center: [51.5098, -0.13586000000000004],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_a45915d5f07d5b3558e347dcca6f67b4 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_a45915d5f07d5b3558e347dcca6f67b4.addTo(map_8000a73b9d8bedcb3faadc23818f5aa9);
+        
+    
+            var circle_marker_9589f5073c1b7f99e8a836e95ace35ca = L.circleMarker(
+                [51.539, -0.1426],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8000a73b9d8bedcb3faadc23818f5aa9);
+        
+    
+        var popup_7823dc28dd1d7172128a0f3402160d59 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_64889e7d99f1ab699edf407031326b80 = $(`<div id="html_64889e7d99f1ab699edf407031326b80" style="width: 100.0%; height: 100.0%;"><b>Camden High Street</b><br>Borough: Camden<br>Average Noise: 74.4 dB(A)</div>`)[0];
+                popup_7823dc28dd1d7172128a0f3402160d59.setContent(html_64889e7d99f1ab699edf407031326b80);
+            
+        
+
+        circle_marker_9589f5073c1b7f99e8a836e95ace35ca.bindPopup(popup_7823dc28dd1d7172128a0f3402160d59)
+        ;
+
+        
+    
+    
+            var circle_marker_9339bf91b647250f58e982fadbfb61c1 = L.circleMarker(
+                [51.509, -0.1685],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8000a73b9d8bedcb3faadc23818f5aa9);
+        
+    
+        var popup_2e09934eafb43ee59ca657972ce44950 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ab48082ad96b17875c70e49f4913b696 = $(`<div id="html_ab48082ad96b17875c70e49f4913b696" style="width: 100.0%; height: 100.0%;"><b>Hyde Park North</b><br>Borough: Westminster<br>Average Noise: 48.8 dB(A)</div>`)[0];
+                popup_2e09934eafb43ee59ca657972ce44950.setContent(html_ab48082ad96b17875c70e49f4913b696);
+            
+        
+
+        circle_marker_9339bf91b647250f58e982fadbfb61c1.bindPopup(popup_2e09934eafb43ee59ca657972ce44950)
+        ;
+
+        
+    
+    
+            var circle_marker_0324b09eaa7b94e21653f6232cdd8fe4 = L.circleMarker(
+                [51.5229, -0.0777],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8000a73b9d8bedcb3faadc23818f5aa9);
+        
+    
+        var popup_88ac7351864f10c285a6c483f3bdcefd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e1f873d9b28e904f838bb1f9656a2cd3 = $(`<div id="html_e1f873d9b28e904f838bb1f9656a2cd3" style="width: 100.0%; height: 100.0%;"><b>Shoreditch High Street</b><br>Borough: Hackney<br>Average Noise: 68.4 dB(A)</div>`)[0];
+                popup_88ac7351864f10c285a6c483f3bdcefd.setContent(html_e1f873d9b28e904f838bb1f9656a2cd3);
+            
+        
+
+        circle_marker_0324b09eaa7b94e21653f6232cdd8fe4.bindPopup(popup_88ac7351864f10c285a6c483f3bdcefd)
+        ;
+
+        
+    
+    
+            var circle_marker_c75e6eacbb4508ae4554e462db2568fd = L.circleMarker(
+                [51.4769, -0.0005],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8000a73b9d8bedcb3faadc23818f5aa9);
+        
+    
+        var popup_3d9aa1e3e729d58d2cd5db25c62ef8de = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8d99183ea5bf2ce5ce200340a4ec2b8d = $(`<div id="html_8d99183ea5bf2ce5ce200340a4ec2b8d" style="width: 100.0%; height: 100.0%;"><b>Greenwich Park Edge</b><br>Borough: Greenwich<br>Average Noise: 48.9 dB(A)</div>`)[0];
+                popup_3d9aa1e3e729d58d2cd5db25c62ef8de.setContent(html_8d99183ea5bf2ce5ce200340a4ec2b8d);
+            
+        
+
+        circle_marker_c75e6eacbb4508ae4554e462db2568fd.bindPopup(popup_3d9aa1e3e729d58d2cd5db25c62ef8de)
+        ;
+
+        
+    
+    
+            var circle_marker_fc28400d15c0b00dfc730bba27fd3aff = L.circleMarker(
+                [51.5054, -0.0235],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8000a73b9d8bedcb3faadc23818f5aa9);
+        
+    
+        var popup_0c578259fda8a81eef18cfc7a0d3e561 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7a49364ffcc05b56b96a38da0e5e001b = $(`<div id="html_7a49364ffcc05b56b96a38da0e5e001b" style="width: 100.0%; height: 100.0%;"><b>Canary Wharf Central</b><br>Borough: Tower Hamlets<br>Average Noise: 74.3 dB(A)</div>`)[0];
+                popup_0c578259fda8a81eef18cfc7a0d3e561.setContent(html_7a49364ffcc05b56b96a38da0e5e001b);
+            
+        
+
+        circle_marker_fc28400d15c0b00dfc730bba27fd3aff.bindPopup(popup_0c578259fda8a81eef18cfc7a0d3e561)
+        ;
+
+        
+    
+    
+            var circle_marker_f5c31fdeeb4403f2389000ee88f16f7b = L.circleMarker(
+                [51.4613, -0.1156],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8000a73b9d8bedcb3faadc23818f5aa9);
+        
+    
+        var popup_e6f295e1c5eb02421f4ecda7527b8f99 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0b036da05f12ce145518fe24c6956f30 = $(`<div id="html_0b036da05f12ce145518fe24c6956f30" style="width: 100.0%; height: 100.0%;"><b>Brixton Road</b><br>Borough: Lambeth<br>Average Noise: 59.7 dB(A)</div>`)[0];
+                popup_e6f295e1c5eb02421f4ecda7527b8f99.setContent(html_0b036da05f12ce145518fe24c6956f30);
+            
+        
+
+        circle_marker_f5c31fdeeb4403f2389000ee88f16f7b.bindPopup(popup_e6f295e1c5eb02421f4ecda7527b8f99)
+        ;
+
+        
+    
+    
+            var circle_marker_f9f3de4cb0a8448285f413bf2e96fa85 = L.circleMarker(
+                [51.556, -0.2795],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8000a73b9d8bedcb3faadc23818f5aa9);
+        
+    
+        var popup_f7f196b8ed3705fa86a89dae09bd52d3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ae9903255367e09ebeee26426ce3b837 = $(`<div id="html_ae9903255367e09ebeee26426ce3b837" style="width: 100.0%; height: 100.0%;"><b>Wembley Stadium Approach</b><br>Borough: Brent<br>Average Noise: 68.5 dB(A)</div>`)[0];
+                popup_f7f196b8ed3705fa86a89dae09bd52d3.setContent(html_ae9903255367e09ebeee26426ce3b837);
+            
+        
+
+        circle_marker_f9f3de4cb0a8448285f413bf2e96fa85.bindPopup(popup_f7f196b8ed3705fa86a89dae09bd52d3)
+        ;
+
+        
+    
+    
+            var circle_marker_4057441ea1a159adf4d46f9cbbb24634 = L.circleMarker(
+                [51.4613, -0.3037],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8000a73b9d8bedcb3faadc23818f5aa9);
+        
+    
+        var popup_26b819a27abac42d3c086e44e9fd5164 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f75584877f2ef0b7305a729f1f933175 = $(`<div id="html_f75584877f2ef0b7305a729f1f933175" style="width: 100.0%; height: 100.0%;"><b>Richmond Riverside</b><br>Borough: Richmond upon Thames<br>Average Noise: 59.8 dB(A)</div>`)[0];
+                popup_26b819a27abac42d3c086e44e9fd5164.setContent(html_f75584877f2ef0b7305a729f1f933175);
+            
+        
+
+        circle_marker_4057441ea1a159adf4d46f9cbbb24634.bindPopup(popup_26b819a27abac42d3c086e44e9fd5164)
+        ;
+
+        
+    
+    
+            var circle_marker_2e5f1d60e9a40c0375786d1f45930a9a = L.circleMarker(
+                [51.4948, -0.1004],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8000a73b9d8bedcb3faadc23818f5aa9);
+        
+    
+        var popup_d6faf034be0c99461af745381f7a62f0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bd168731866bdc3d5fef6bbced09524d = $(`<div id="html_bd168731866bdc3d5fef6bbced09524d" style="width: 100.0%; height: 100.0%;"><b>Elephant & Castle Junction</b><br>Borough: Southwark<br>Average Noise: 74.5 dB(A)</div>`)[0];
+                popup_d6faf034be0c99461af745381f7a62f0.setContent(html_bd168731866bdc3d5fef6bbced09524d);
+            
+        
+
+        circle_marker_2e5f1d60e9a40c0375786d1f45930a9a.bindPopup(popup_d6faf034be0c99461af745381f7a62f0)
+        ;
+
+        
+    
+    
+            var circle_marker_638a0d35039cada61163671087723351 = L.circleMarker(
+                [51.5714, -0.1466],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_8000a73b9d8bedcb3faadc23818f5aa9);
+        
+    
+        var popup_9d0986a44bef62f157580d17fab55d9f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d22a795b5770f5976da036e9acedf91a = $(`<div id="html_d22a795b5770f5976da036e9acedf91a" style="width: 100.0%; height: 100.0%;"><b>Highgate Village</b><br>Borough: Camden<br>Average Noise: 59.7 dB(A)</div>`)[0];
+                popup_9d0986a44bef62f157580d17fab55d9f.setContent(html_d22a795b5770f5976da036e9acedf91a);
+            
+        
+
+        circle_marker_638a0d35039cada61163671087723351.bindPopup(popup_9d0986a44bef62f157580d17fab55d9f)
+        ;
+
+        
+    
+</script>
+</html>
