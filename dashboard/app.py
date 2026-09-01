@@ -116,9 +116,10 @@ def render_time_series(df: pd.DataFrame, predictions: pd.DataFrame) -> None:
         go.Scatter(
             x=history_df["timestamp"],
             y=history_df["noise_level_db"],
-            mode="lines",
+            mode="lines+markers",
             name="Observed Noise",
             line=dict(color="#1f77b4", width=2),
+            marker=dict(size=4),
         )
     )
 

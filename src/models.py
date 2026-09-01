@@ -115,9 +115,9 @@ def fit_feature_models(
             ]
         )
         pipeline.fit(X_train, y_train)
-        preds = pipeline.predict(X_test)
+        preds = pipeline.predict(model_df[feature_columns])
 
-        frame = metadata_frame(test_analysis)
+        frame = metadata_frame(analysis_df)
         frame["prediction"] = preds
         frame["model"] = model_name
         prediction_frames.append(frame)
@@ -145,6 +145,9 @@ def fit_sarima_per_location(analysis_df: pd.DataFrame) -> tuple[pd.DataFrame, di
 
     for location_id, location_train in train_df.groupby("location_id", observed=True):
         location_test = test_df[test_df["location_id"] == location_id].copy()
+        location_train = location_train.sort_values("timestamp")
+        location_test = location_test.sort_values("timestamp")
+        location_full = pd.concat([location_train, location_test])
         train_series = location_train.set_index("timestamp")["noise_level_db"]
 
         try:
@@ -156,13 +159,23 @@ def fit_sarima_per_location(analysis_df: pd.DataFrame) -> tuple[pd.DataFrame, di
                 enforce_invertibility=False,
             )
             fitted = model.fit(disp=False)
-            forecast = fitted.get_forecast(steps=len(location_test)).predicted_mean.to_numpy()
+            
+            # In-sample predictions
+            in_sample = fitted.fittedvalues.to_numpy()
+            
+            # Out-of-sample forecast
+            if len(location_test) > 0:
+                out_of_sample = fitted.get_forecast(steps=len(location_test)).predicted_mean.to_numpy()
+                forecast = np.concatenate([in_sample, out_of_sample])
+            else:
+                forecast = in_sample
+                
             note = "seasonal_sarima"
         except Exception as exc:  # pragma: no cover - defensive fallback
-            forecast = np.repeat(train_series.iloc[-1], len(location_test))
+            forecast = np.repeat(train_series.iloc[-1], len(location_full))
             note = f"fallback_last_value:{exc.__class__.__name__}"
 
-        frame = metadata_frame(location_test)
+        frame = metadata_frame(location_full)
         frame["prediction"] = forecast
         frame["model"] = "SARIMA"
         prediction_frames.append(frame)
@@ -186,7 +199,7 @@ def main() -> None:
 
     project_directories()
     analysis_df, model_df = load_datasets(args.analysis_input, args.model_input)
-    baseline_df = baseline_predictions(chronological_split(analysis_df)[1])
+    baseline_df = baseline_predictions(analysis_df)
     feature_model_df, persisted_models, split_info = fit_feature_models(analysis_df, model_df)
     sarima_df, sarima_notes = fit_sarima_per_location(analysis_df)
 

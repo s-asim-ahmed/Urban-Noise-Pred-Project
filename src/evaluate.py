@@ -8,9 +8,19 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns
+import json
 from sklearn.metrics import mean_absolute_error, root_mean_squared_error
 
 from utils import FIGURES_DIR, models_path, project_directories
+
+
+def load_split_timestamp() -> pd.Timestamp | None:
+    split_path = models_path("train_test_split.json")
+    if split_path.exists():
+        with open(split_path, "r", encoding="utf-8") as handle:
+            data = json.load(handle)
+            return pd.Timestamp(data["split_timestamp"])
+    return None
 
 
 matplotlib.use("Agg")
@@ -81,8 +91,15 @@ def main() -> None:
 
     project_directories()
     predictions = load_predictions(args.input)
-    metrics = compute_metrics(predictions)
-    location_metrics = compute_location_metrics(predictions)
+
+    split_timestamp = load_split_timestamp()
+    if split_timestamp is not None:
+        eval_predictions = predictions[predictions["timestamp"] >= split_timestamp].copy()
+    else:
+        eval_predictions = predictions
+
+    metrics = compute_metrics(eval_predictions)
+    location_metrics = compute_location_metrics(eval_predictions)
 
     metrics.to_csv(models_path("model_metrics.csv"), index=False)
     location_metrics.to_csv(models_path("model_metrics_by_location.csv"), index=False)
